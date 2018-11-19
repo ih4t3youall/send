@@ -1,6 +1,8 @@
 package ar.com.snipplet.dto;
 
 
+import ar.com.snipplet.domain.Snipplet;
+
 import java.io.Serializable;
 
 public class SnippletDTO implements Serializable {
@@ -17,11 +19,21 @@ public class SnippletDTO implements Serializable {
     public void setNombreCategoria(String nombreCategoria){
         this.nombreCategoria=nombreCategoria;
     }
+    public SnippletDTO(){}
     public String getNombreCategoria(){
         return this.nombreCategoria;
 
     }
+    public SnippletDTO(Snipplet snipplet){
+        this.titulo = snipplet.getTitulo();
+        this.contenido = snipplet.getContenido();
+    }
 
+    public SnippletDTO(Snipplet snipplet, String nombreCategoria){
+        this.titulo = snipplet.getTitulo();
+        this.contenido = snipplet.getContenido();
+        this.nombreCategoria = nombreCategoria;
+    }
     public String getTitulo() {
         return titulo;
     }
