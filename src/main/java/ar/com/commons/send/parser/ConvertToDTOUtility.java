@@ -38,6 +38,26 @@ public class ConvertToDTOUtility {
 		categoriaDTO.setSnipplets(collect);
 		return categoriaDTO;
 	}
+	public static SnippletDTO fromSnippletToSnippletDTO(Snipplet snipplet){
+		SnippletDTO sDTO = new SnippletDTO();
+		sDTO.setTitulo(snipplet.getTitulo());
+		sDTO.setContenido(snipplet.getContenido());
+		sDTO.setNombreCategoria(snipplet.getCategoria().getNombreCategoria());
+		return sDTO;
+
+	}
+	public static Snipplet fromSnippletDTOtoSnipplet(SnippletDTO snippletDTO){
+		Snipplet snip = new Snipplet();
+		snip.setTitulo(snippletDTO.getTitulo());
+		snip.setContenido(snippletDTO.getContenido());
+		return snip;
+	}
+	public static Snipplet fromSnippletDTOtoSnippletWithCategory(SnippletDTO snippletDTO,Category category){
+
+	    Snipplet snip = fromSnippletDTOtoSnipplet(snippletDTO);
+	    snip.setCategoria(category);
+	    return snip;
+	}
 
 
 }
