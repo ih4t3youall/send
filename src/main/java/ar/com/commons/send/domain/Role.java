@@ -1,4 +1,4 @@
-package ar.com.snipplet.domain;
+package ar.com.commons.send.domain;
 
 import javax.persistence.*;
 

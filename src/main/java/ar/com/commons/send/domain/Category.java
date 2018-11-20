@@ -1,4 +1,4 @@
-package ar.com.snipplet.domain;
+package ar.com.commons.send.domain;
 
 import com.google.gson.annotations.Expose;
 
@@ -21,6 +21,15 @@ public class Category {
 	@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL, orphanRemoval = true)
 	@Expose
 	private List<Snipplet> snipplets;
+
+	public Category(String categoryName,User user){
+	this.nombreCategoria  = categoryName;
+	this.user = user;
+	}
+	public Category(String categoryName){
+		this.nombreCategoria = categoryName;
+	}
+	public Category(){}
 
 	public Long getId() {
 		return id;

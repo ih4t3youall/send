@@ -1,13 +1,11 @@
-package ar.com.snipplet.parser;
+package ar.com.commons.send.parser;
 
 
-import ar.com.snipplet.domain.Category;
-import ar.com.snipplet.domain.Snipplet;
-import ar.com.snipplet.domain.User;
-import ar.com.snipplet.dto.CategoriaDTO;
-import ar.com.snipplet.dto.SnippletDTO;
+import ar.com.commons.send.domain.Snipplet;
+import ar.com.commons.send.dto.SnippletDTO;
+import ar.com.commons.send.domain.Category;
+import ar.com.commons.send.dto.CategoriaDTO;
 
-import javax.transaction.Transactional;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;

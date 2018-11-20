@@ -1,7 +1,7 @@
-package ar.com.snipplet.dto;
+package ar.com.commons.send.dto;
 
 
-import ar.com.snipplet.domain.Snipplet;
+import ar.com.commons.send.domain.Snipplet;
 
 import java.io.Serializable;
 
@@ -48,6 +48,19 @@ public class SnippletDTO implements Serializable {
 
     public void setContenido(String contenido) {
         this.contenido = contenido;
+    }
+
+    public boolean buscarTexto(String palabra) {
+
+        if (contenido.indexOf(palabra) != -1 || titulo.indexOf(palabra) != -1) {
+
+            return true;
+        } else {
+
+            return false;
+
+        }
+
     }
 
     @Override

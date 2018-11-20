@@ -1,6 +1,6 @@
-package ar.com.snipplet.domain;
+package ar.com.commons.send.domain;
 
-import ar.com.snipplet.dto.SnippletDTO;
+import ar.com.commons.send.dto.SnippletDTO;
 import com.google.gson.annotations.Expose;
 
 import javax.persistence.*;
@@ -73,17 +73,6 @@ public class Snipplet implements Serializable {
 		this.categoria = categoria;
 	}
 
-	public boolean buscarTexto(String palabra) {
 
-		if (contenido.indexOf(palabra) != -1 || titulo.indexOf(palabra) != -1) {
-
-			return true;
-		} else {
-
-			return false;
-
-		}
-
-	}
 
 }

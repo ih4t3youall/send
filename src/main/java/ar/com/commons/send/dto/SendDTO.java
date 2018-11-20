@@ -1,4 +1,4 @@
-package ar.com.snipplet.dto;
+package ar.com.commons.send.dto;
 
 import java.io.Serializable;
 

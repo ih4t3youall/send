@@ -1,8 +1,0 @@
-ar\com\snipplet\parser\ConvertToDTOUtility.class
-ar\com\snipplet\domain\User.class
-ar\com\snipplet\domain\Role.class
-ar\com\snipplet\dto\SendDTO.class
-ar\com\snipplet\dto\SnippletDTO.class
-ar\com\snipplet\domain\Category.class
-ar\com\snipplet\dto\CategoriaDTO.class
-ar\com\snipplet\domain\Snipplet.class
