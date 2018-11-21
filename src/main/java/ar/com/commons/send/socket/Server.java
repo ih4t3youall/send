@@ -6,17 +6,14 @@ import java.net.Socket;
 
 public class Server implements Runnable{
 
-    private String url;
     private String directory;
     private int port;
 
-    public Server(String url, String directory){
-        this.url = url;
+    public Server( String directory){
         this.directory = directory;
         this.port = 5000;
     }
-    public Server(String url, String directory,int port){
-        this.url = url;
+    public Server( String directory,int port){
         this.directory = directory;
         this.port = port;
     }
