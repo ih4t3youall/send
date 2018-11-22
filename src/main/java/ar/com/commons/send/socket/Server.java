@@ -3,6 +3,8 @@ package ar.com.commons.send.socket;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Server implements Runnable{
 
@@ -16,6 +18,11 @@ public class Server implements Runnable{
     public Server( String directory,int port){
         this.directory = directory;
         this.port = port;
+    }
+    public static void main(String [] args){
+        Server server = new Server("/Users/lequerica/Desktop/Server");
+        Thread t = new Thread(server);
+        t.start();
     }
 
     public void run(){
@@ -34,10 +41,13 @@ public class Server implements Runnable{
         try{
             //Servidor Socket en el puerto 5000
             server = new ServerSocket( port );
-            System.out.println("iniciando");
+            System.out.println("Initializing..");
+            System.out.println("Save directory: "+directory);
             while ( true ) {
                 //Aceptar conexiones
+                System.out.println("Connection accept");
                 connection = server.accept();
+                System.out.println("Receiving data");
                 //Buffer de 1024 bytes
                 receivedData = new byte[1024];
                 bis = new BufferedInputStream(connection.getInputStream());
@@ -54,6 +64,7 @@ public class Server implements Runnable{
                 }
                 bos.close();
                 dis.close();
+                System.out.println("closing transmission...");
             }
         }catch (Exception e ) {
             System.err.println(e);

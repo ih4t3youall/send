@@ -20,6 +20,14 @@ public class Client implements Runnable {
         this.port = port;
     }
 
+    public static void main(String [] args){
+
+      String filename = "/Users/lequerica/Desktop/script";
+      Client client = new Client(filename,"localhost");
+      Thread t = new Thread(client);
+      t.start();
+
+    }
     @Override
     public void run(){
         DataInputStream input;
