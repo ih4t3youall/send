@@ -1,5 +1,6 @@
 package ar.com.commons.send.airdrop.services;
 
+import ar.com.commons.send.airdrop.Constantes;
 import ar.com.commons.send.airdrop.Mensaje;
 
 import java.io.IOException;
@@ -11,7 +12,7 @@ import java.net.Socket;
 public class EnviarMensaje extends Thread{
 
     public Mensaje mensaje;
-    private static int PUERTO = 8123;
+    private static int PUERTO = Constantes.PUERTO;
 
     public EnviarMensaje(Mensaje mensaje){
         this.mensaje = mensaje;
