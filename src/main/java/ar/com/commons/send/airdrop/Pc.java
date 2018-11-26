@@ -36,6 +36,10 @@ public class Pc implements Serializable {
         this.nombreEquipo = nombreEquipo;
     }
 
+    @Override
+    public String toString(){
+       return nombreEquipo;
+    }
 
 
 }
